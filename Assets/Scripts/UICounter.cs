@@ -18,7 +18,7 @@ public class UICounter : MonoBehaviour
     public void AddToCounter(int add)
     {
         counter += add;
-        counterText.text = counter.ToString();
+        counterText.text = "Coins: " + counter.ToString();
     }
 
     
@@ -27,7 +27,7 @@ public class UICounter : MonoBehaviour
     public void SetCounter(int set)
     {
         counter = set;
-        counterText.text = counter.ToString();
+        counterText.text = "Coins: " + counter.ToString();
     }
 
     // Compares a number (other), if they are the same - invoke the onComparedAndTrue Unity Event
