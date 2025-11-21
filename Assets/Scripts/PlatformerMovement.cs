@@ -81,9 +81,9 @@ public class PlatformerMovement : MonoBehaviour
         if (spriteRenderer)
         {
             if (moveInput.x > 0.01f)
-                spriteRenderer.flipX = false;
-            else if (moveInput.x < -0.01f)
                 spriteRenderer.flipX = true;
+            else if (moveInput.x < -0.01f)
+                spriteRenderer.flipX = false;
         }
     }
 
@@ -94,6 +94,14 @@ public class PlatformerMovement : MonoBehaviour
         rb.linearVelocity = velocity;
         
         // Write movement animation code here. (Suggestion: send your current velocity into the Animator for both the x- and y-axis.)
+        if (velocity.x != 0)
+        {
+            animator.Play("Walk");
+        }
+        else
+        {
+            animator.Play("Player");
+        }
     }
 
     private bool IsGrounded()
