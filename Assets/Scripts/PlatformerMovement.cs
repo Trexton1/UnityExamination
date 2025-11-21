@@ -34,7 +34,7 @@ public class PlatformerMovement : MonoBehaviour
     [SerializeField] private Animator animator;
     
     void Awake()
-    {
+    { 
         rb = GetComponent<Rigidbody2D>();
         
         groundCheckCollider = GetComponent<CircleCollider2D>();
@@ -87,7 +87,7 @@ public class PlatformerMovement : MonoBehaviour
         }
     }
 
-    private void FixedUpdate()
+    private void FixedUpdate() 
     {
         isGrounded = IsGrounded();
         ApplyGravity();
